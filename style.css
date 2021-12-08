@@ -1,0 +1,40 @@
+body {
+  background: rgba(255, 255, 255, 1);
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container > .header {background-color: red;}
+.container > .menu {background-color: yellow;}
+.container >.main1 {
+  background-color: yellow;
+  color: blue;
+}
+
+.main1 > img {
+  height: 300px;
+  margin: 0 50% 0 40%;
+}
+
+#h1 {
+  text-align: center;
+}
+
+.container >.main2 {background-color: green;}
+.container > .footer {background-color: red;}
+
+.header {grid-area: h;}
+.menu {grid-area: me;}
+.main1 {grid-area: ma1;}
+.main2 {grid-area: ma2;}
+.footer {grid-area: f;}
+
+.container {
+  display: grid;
+  grid-template: 80px auto auto 80px / repeat(4, 1fr);
+  grid-template-areas:
+          "h h h me"
+          "ma1 ma1 ma1 ma1"
+          "ma2 ma2 ma2 ma2"
+          "f f f f";
+  }
