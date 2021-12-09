@@ -47,22 +47,22 @@ body {
  }
 
 
+ .header > img {
+   height: 120px;
+   width: auto;
+   margin: 10px 0 0 15px;
+   position: absolute;
+ }
+
+ .menu > img {
+   height: 45px;
+   float: right;
+   margin: 20px 18% 0 0;
+ }
+
 .main > img {
   height: 300px;
   margin: 0 0 0 40%;
-}
-
-.header > img {
-  height: 120px;
-  width: auto;
-  margin: 10px 0 0 15px;
-  position: absolute;
-}
-
-.menu > img {
-  height: 45px;
-  float: right;
-  margin: 20px 18% 0 0;
 }
 
 .main2 > img {
