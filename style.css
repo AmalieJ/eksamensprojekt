@@ -81,3 +81,16 @@ body {
   height: 400px;
   margin: 0 0 30px 5%;
 }
+
+
+.navigation {
+  height: 100%;
+  transition: 0.5s;
+}
+
+.navigation > a {
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 40px 0 40px 0;
+}
