@@ -1,4 +1,4 @@
-body {
+body  {
   background: rgba(255, 255, 255, 1);
   max-width: 1200px;
   margin: auto;
@@ -54,11 +54,6 @@ body {
    position: absolute;
  }
 
- .menu > img {
-   height: 45px;
-   float: right;
-   margin: 20px 18% 0 0;
- }
 
 .main > img {
   height: 300px;
@@ -83,14 +78,39 @@ body {
 }
 
 
-.navigation {
-  height: 100%;
-  transition: 0.5s;
+
+.nav-open-icon > img {
+  height:45px;
+  margin: 1rem 20% 0 0;
+  float: right;
 }
 
-.navigation > a {
-display: flex;
-flex-direction: row;
-justify-content: center;
-margin: 40px 0 40px 0;
+.nav-open-icon:hover + .nav-elements {
+    display: block;
+}
+
+.nav-elements:hover {
+    display: block;
+}
+
+.nav-elements {
+    margin-top: 0em;
+    display: none;
+    position: absolute;
+    padding: 5rem 0 0 0;
+}
+
+
+.nav-elements > a {
+    text-decoration: none;
+    color: black;
+    background-color: #f99c9c;
+    font-size: 1.5em;
+    text-align: center;
+    width: 150px;
+    width: 100%;
+}
+
+.nav-elements a:hover {
+    background-color: #e68686;
 }
