@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&family=Montserrat:wght@400;600&display=swap');
+
 body  {
   background: rgba(255, 255, 255, 1);
   max-width: 1200px;
   margin: auto;
 }
 
-.header {grid-area: h;}
-.menu {grid-area: me;}
-.main {grid-area: ma;}
-.footer {grid-area: f;}
+.header {
+  grid-area: h;
+  background-color: red;
+}
+
+.menu {
+  grid-area: me;
+  background-color: yellow;
+}
+
+.main {
+  grid-area: ma;
+  background-color: yellow;
+  color: blue;
+  overflow-y: hidden;
+}
+
+.footer {
+  grid-area: f;
+  background-color: red;
+}
 
 .container {
   display: grid;
@@ -18,32 +37,30 @@ body  {
           "f f f f";
 }
 
-.container > .header {background-color: red;}
-.container > .menu {background-color: yellow;}
+
 .main2 {background-color: green;}
-.container > .footer {background-color: red;}
-.container > .main {
-  background-color: yellow;
-  color: blue;
-}
 
 
 .p {
   padding: 0 5% 40px 5%;
+  font: bold 1rem 'Montserrat', arial, sans-serif;
 }
 
 .p-uden {
   padding: 0 5% 0 5%;
+  font: bold 1rem 'Montserrat', arial, sans-serif;
 }
 
 .h1 {
    padding: 40px 5% 15px 5%;
    text-transform: uppercase;
+   font: bold 3rem 'Encode Sans', arial, sans-serif;
  }
 
  #h1 {
    text-align: center;
    margin-top: 60px;
+   font: bold 3rem 'Encode Sans', arial, sans-serif;
  }
 
 
@@ -55,28 +72,24 @@ body  {
  }
 
 
-.main > img {
-  height: 300px;
-  margin: 0 0 0 40%;
+.about-img {
+  height: 20rem;
+  margin: auto;
+  width: fit-content;
 }
 
-.main2 > img {
-  width: 90%;
-  height: auto;
-  margin: 0 5% 0 5%;
+.about-img > img {
+  object-fit: contain;
+  height: 100%;
+  max-width: 90vw;
 }
 
-.main-arbejde > img {
+
+.product-img img {
   width: 90%;
   height: auto;
   margin: 40px 5% 0 5%;
 }
-
-#malle-peger {
-  height: 400px;
-  margin: 0 0 30px 5%;
-}
-
 
 
 .nav-open-icon > img {
@@ -86,11 +99,11 @@ body  {
 }
 
 .nav-open-icon:hover + .nav-elements {
-    display: block;
+    display: flex;
 }
 
 .nav-elements:hover {
-    display: block;
+    display: flex;
 }
 
 .nav-elements a:hover {
@@ -99,19 +112,20 @@ body  {
 
 .nav-elements {
     margin-top: 0em;
+    text-align: center;
     display: none;
-    position: absolute;
-    padding: 5rem 0 0 0;
+    padding-top: 1.2rem;
     width: 100%;
-    background-color: red;
+    flex-direction: column;
 }
 
+.nav-element {
+  text-align: center;
+}
 
 .nav-elements > a {
-  display: flex;
-  flex-direction: row;
   background-color: pink;
   text-decoration: none;
-  padding: 1rem 0 1rem 1rem;
-  font-size: 1.3em;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.3rem;
 }
