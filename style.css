@@ -1,9 +1,14 @@
+/* importere fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@700&display=swap');
 
+
+/*grundlayout */
+
 body  {
   background: rgba(255, 255, 255, 1);
-  max-width: 1200px;
+  max-width: 1007;
   margin: auto;
 }
 
@@ -31,7 +36,7 @@ body  {
 
 .container {
   display: grid;
-  grid-template: 80px auto 80px / repeat(4, 1fr);
+  grid-template: 5rem auto 5rem / repeat(4, 1fr);
   grid-template-areas:
           "h h h me"
           "ma ma ma ma"
@@ -42,42 +47,44 @@ body  {
 .main2 {background-color: green;}
 
 
+/* typografi */
+
 .p {
-  padding: 0 5% 40px 5%;
+  padding: 0 5% 2.5rem 5%;
   font: 400 1rem 'Montserrat', arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .p-uden {
   padding: 0 5% 0 5%;
   font: 400 1rem 'Montserrat', arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .h1 {
-   padding: 40px 5% 15px 5%;
-   text-transform: uppercase;
-   font: 700 3rem 'Encode Sans', arial, sans-serif;
+   padding: 2.5rem 5% 1rem 5%;
+   font: 700 2.5rem 'Encode Sans', arial, sans-serif;
  }
 
  #h1 {
    text-align: center;
-   margin-top: 60px;
-   font: 700 3rem 'Encode Sans', arial, sans-serif;
-   line-height: 1.5;
+   margin-top: 3.5rem;
+   font: 700 2.5rem 'Encode Sans', arial, sans-serif;
  }
 
 
+/* billeder og knapper */
+
  .header > img {
-   height: 120px;
+   height: 7.5rem;
    width: auto;
-   margin: 10px 0 0 15px;
+   margin: 0.6rem 0 0 1rem;
    position: absolute;
  }
 
 
 .about-img {
-  height: 20rem;
+  height: 25rem;
   margin: auto;
   width: fit-content;
 }
@@ -85,30 +92,37 @@ body  {
 .about-img > img {
   object-fit: contain;
   height: 100%;
-  max-width: 90vw;
+  max-width: 90%;
 }
 
 
-.product-img img {
+.product-img > img {
   width: 90%;
   height: auto;
-  margin: 40px 5% 0 5%;
+  margin: 2.5rem 5% 0 5%;
 }
 
 .product > a {
   display: flex;
   flex-direction: column;
-  background-color: green;
+  background-color: purple;
   align-items: center;
   margin: 3rem auto 3rem auto;
-  padding: 1rem 0 1rem 0;
+  padding: 1.5rem 0 1.5rem 0;
   max-width: 50rem;
-  font: 600 1.3rem 'Montserrat', arial, sans-serif;
+  font: 600 1.5rem 'Montserrat', arial, sans-serif;
+  text-decoration: none;
 }
 
+.product > a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* navigationsmenu */
 
 .nav-open-icon > img {
-  height:45px;
+  height:2.8rem;
   margin: 1rem 20% 0 0;
   float: right;
 }
@@ -121,12 +135,13 @@ body  {
     display: flex;
 }
 
-.nav-elements a:hover {
+.nav-elements > a:hover {
     background-color: #e68686;
+    color: white;
 }
 
 .nav-elements {
-    margin-top: 0em;
+    margin-top: 0rem;
     text-align: center;
     display: none;
     position: relative;
@@ -144,4 +159,12 @@ body  {
   text-decoration: none;
   padding: 1rem 0 1rem 0;
   font: 600 1.3rem 'Montserrat', arial, sans-serif;
+}
+
+
+@media only screen and (min-width: 992px) {
+  body, .main {
+    background: blue;
+  }
+
 }
