@@ -213,4 +213,11 @@ body  {
     min-width: 30rem;
   }
 
+  .p , .p-uden {
+    line-height: 2;
+  }
+
+  #h1 {
+    margin: 3.5rem 0 20% 0;
+  }
 }
