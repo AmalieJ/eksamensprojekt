@@ -80,7 +80,6 @@ body  {
   position: absolute;
 }
 
-
 .about-img {
   max-width: 25rem;
   margin: auto;
@@ -262,20 +261,20 @@ body  {
     font-size: 2.5rem;
   }
 
-   .h1 , .h1-mindre-top {
-      font-size: 2.5rem;
-      margin-left: 4rem;
-      margin-right: 3rem;
-    }
+  .h1 , .h1-mindre-top {
+    font-size: 2.5rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+  }
 
-    .h1 {
-        margin-top: 5rem;
-    }
+  .h1 {
+    margin-top: 5rem;
+  }
 
-    .product > a , .products > a {
-      font-size: 1.5rem;
-      max-width: 50rem;
-    }
+  .product > a , .products > a {
+    font-size: 1.5rem;
+    max-width: 50rem;
+  }
 
 /* navigationsmenu */
 
@@ -287,8 +286,8 @@ body  {
       display: inline;
   }
 
-  /.nav-elements:hover {
-      display: inline;
+  .nav-elements:hover {
+      display: inline-flex;
   }
 
   .nav-elements > a:hover {
@@ -301,7 +300,7 @@ body  {
     flex-direction: row;
     display: flex;
     position: inherit;
-    width: wrap;
+    width: inherit;
     margin-top: -0.5rem;
   }
 
@@ -312,6 +311,4 @@ body  {
     color: #ffffff;
     font-size: 1.3rem;
   }
-
-
 }
