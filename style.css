@@ -7,35 +7,36 @@
 /*grundlayout */
 
 body  {
-  background: rgba(255, 255, 255, 1);
+  background: #ffffff;
   max-width: 87rem;
   margin: auto;
 }
 
 .header {
   grid-area: h;
-  background-color: red;
+  background-color: #d2bbf2;
 }
 
 .menu {
   grid-area: me;
-  background-color: yellow;
+  background-color: #d2bbf2;
 }
 
 .main {
   grid-area: ma;
-  background-color: yellow;
-  color: blue;
+  background-color: #ffffff;
+  color: #554073;
   overflow-y: hidden;
 }
 
 .footer {
   grid-area: f;
-  background-color: red;
+  background-color: #d2bbf2;
 }
 
 .container {
   display: grid;
+  box-shadow: 0 0 20px 1px #ede9f2;
   grid-template: 5rem auto 5rem / repeat(4, 1fr);
   grid-template-areas:
           "h h h me"
@@ -44,61 +45,73 @@ body  {
 }
 
 
-.main2 {background-color: green;}
+.main2 {background-color: #ede9f2;}
 
 
 /* typografi */
 
 .p {
-  padding: 0 5% 2.5rem 5%;
-  font: 400 0.9rem 'Montserrat', arial, sans-serif;
-  line-height: 1.8;
-}
-
-.p-uden {
-  padding: 0 5% 0 5%;
+  margin: 2rem 5% 2rem 5%;
   font: 400 0.9rem 'Montserrat', arial, sans-serif;
   line-height: 1.8;
 }
 
 .h1 {
-   padding: 2.5rem 5% 1rem 5%;
+   margin: 5rem 5% 0 5%;
+   font: 700 1.8rem 'Encode Sans', arial, sans-serif;
+ }
+
+ .h1-mindre-top {
+   margin: 2rem 5% 0 5%;
    font: 700 1.8rem 'Encode Sans', arial, sans-serif;
  }
 
  #h1 {
    text-align: center;
-   margin-top: 2.5rem;
+   margin-top: 4rem;
    font: 700 2rem 'Encode Sans', arial, sans-serif;
  }
 
 
-/* billeder og knapper */
+/* billeder, videoer og knapper */
 
- .logo {
-   ;
-   margin: 0.6rem 0 0 1rem;
-   position: absolute;
- }
+.logo {
+  margin: 0.6rem 0 0 1rem;
+  position: absolute;
+}
 
 
 .about-img {
-  width: 20rem;
+  width: 25rem;
   margin: auto;
 }
 
 .about-img > img {
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   object-fit: cover;
   object-position: top;
+}
+
+.product-video , .product-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-video > video {
+  width: 90%;
+  height: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
 }
 
 
 .product-img > img {
   width: 90%;
   height: auto;
-  margin: 2.5rem 5% 0 5%;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
 }
 
 .product , .products {
@@ -108,18 +121,19 @@ body  {
 .product > a , .products > a {
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  background-color: #ded0f2;
   align-items: center;
-  margin: 3rem auto 3rem auto;
+  margin: 0 auto 5% auto;
   padding: 1.5rem 0 1.5rem 0;
-  max-width: 50rem;
+  max-width: 30rem;
   font: 600 1.2rem 'Montserrat', arial, sans-serif;
   text-decoration: none;
+  color: #554073;
 }
 
 .product > a:hover , .products > a:hover {
-  background-color: black;
-  color: white;
+  background-color: #8e6bbf;
+  color: #ffffff;
 }
 
 /* navigationsmenu */
@@ -139,8 +153,8 @@ body  {
 }
 
 .nav-elements > a:hover {
-    background-color: #e68686;
-    color: white;
+    background-color: #ae8fd9;
+    color: #ffffff;
 }
 
 .nav-elements {
@@ -157,7 +171,8 @@ body  {
 }
 
 .nav-elements > a {
-  background-color: pink;
+  background-color: #d2bbf2;
+  color: #554073;
   text-decoration: none;
   padding: 1rem 0 1rem 0;
   font: 600 1rem 'Montserrat', arial, sans-serif;
@@ -178,17 +193,12 @@ body  {
 
 
 @media only screen and (min-width: 992px) {
-  .header > img {
-    height: 8.5rem;
-  }
+
+  /* billeder, videoer, knapper m.m.*/
 
   .main-container {
     flex-direction: row;
 
-  }
-
-  .main {
-    background: pink;
   }
 
   .desktop-only {
@@ -210,6 +220,19 @@ body  {
     margin-top: 2rem;
   }
 
+  .product-video > video {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  .product-img > img {
+    max-width: 40rem;
+    height: auto;
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+  }
+
+
   .product {
     display: flex;
     align-items: flex-end;
@@ -222,22 +245,27 @@ body  {
 
 /* typografi */
 
-  .p , .p-uden {
+  .p {
     line-height: 2;
     font-size: 1rem;
+    margin: 3rem;
   }
 
   #h1 {
-    margin: 5rem 0 20% 0;
-    margin-bottom: 8%;
+    margin: 5rem 3rem 0 3rem;
     font-size: 2.5rem;
   }
 
-   .h1 {
-      padding-top: 3.5rem;
+   .h1 , .h1-mindre-top {
       font-size: 2.5rem;
+      margin-left: 3rem;
+      margin-right: 3rem;
     }
 
+    .product > a , .products > a {
+      font-size: 1.5rem;
+      max-width: 50rem;
+    }
 
 /* navigationsmenu */
 
@@ -256,7 +284,7 @@ body  {
   .nav-elements > a:hover {
       display: inline;
       background-color: inherit;
-      color: red;
+      color: #8e6bbf;
   }
 
   .nav-elements {
@@ -271,7 +299,7 @@ body  {
     background-color: inherit;
     margin: 0 2rem 5rem 2rem;
     width: 8rem;
-    color: black;
+    color: #ffffff;
     font-size: 1.3rem;
   }
 
